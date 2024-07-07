@@ -1,0 +1,164 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffcccc; /* Romantic color combination */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    max-height: 100vh;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  
+}
+
+header {
+    background-color: #ff99cc; /* Light pink */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+.letter {
+    background-color: #fff;
+    padding: 20px;
+    max-height: 50vh; ;
+    border-radius: 0 0 10px 10px;
+    position: relative;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.letter h2 {
+    font-size: 1.5em;
+    color: #ff66cc; /* Darker pink */
+    margin-bottom: 10px;
+}
+
+.letter p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+.left{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: 100px;
+    background-image: radial-gradient(circle, #ff99cc, #ff66cc);
+    border-radius: 50%;
+    animation: bloom 5s ease-in-out infinite alternate;
+}
+.flowers {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 100px;
+    height: 100px;
+    background-image: radial-gradient(circle, #ff99cc, #ff66cc);
+    border-radius: 50%;
+    animation: bloom 5s ease-in-out infinite alternate;
+}
+.flowers img{
+    width: 100px;
+    height: 100px;
+}
+.video-container {
+    margin-top: 20px;
+    position: absolute;
+    right: 35px;
+    top: 100px;
+    
+}
+
+.video-container video {
+
+   width: 15vw;
+    border-radius: 10px;
+}
+
+#toggleMusicButton {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #ff99cc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#toggleMusicButton:hover {
+    background-color: #ff66cc;
+}
+
+/* Custom scrollbar */
+.letter::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+/* Track */
+.letter::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color of the track */
+    border-radius: 10px;
+}
+
+/* Handle */
+.letter::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the handle */
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+.letter::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker color on hover */
+}
+
+@keyframes bloom {
+    0% { transform: scale(0.8); }
+    100% { transform: scale(1.2); }
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .letter {
+        border-radius: 0;
+    }
+}
